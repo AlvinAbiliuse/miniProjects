@@ -1,5 +1,5 @@
 :root {
-	--blue: blue;
+	--blue: #5153c7;
 }
 
 
@@ -8,47 +8,96 @@
 	margin: 0;
 	box-sizing: border-box;
 	line-height: 1.2em;
-	outline: 1px solid red;
 }
-
 
 body {
 	height: 100%;
 	font-size: 20px;
+	font-family: sans-serif;
 }	
 
 .container {
 	margin: 50px auto;
 	width: 300px;
-	height: 500px;
-	border: 2px solid blue;
-	border-radius: 20px;
+	border-radius: 15px;
+	padding: 20px 0px;
+	box-shadow: -1px 1px 10px lightgray;
 	> *{
 		margin: 20px auto;
-}
-
-.link {
-	display: flex;
-	justify-content: center;
-	a {
-		padding: 10px 20px;
-		text-decoration: none;
-		color: white;
-		background: var(--blue);
-		border-radius: 10px;
 	}
 }
 
 
+.nameCard {
+	display: grid;
+	margin: auto 20px;
+	margin-bottom: 80px;
+	grid-template-columns: 1fr 2fr;
+	justify-content: space-between;
+	align-items: center;
+	.left {
+		height: 70px;
+		width: 70px;
+		overflow: hidden;
+		border-radius: 50px;
+	}
+	.left img {
+		transform: translateY(-5px) translateX(-5px);
+	}
+	p {
+		color: #545454;
+	}
+
+}
+
+
+.link {
+	margin-top: 40px;
+	display: flex;
+	justify-content: center;
+	a {
+		padding: 10px 20px;
+		font-size: 18px;	
+		text-decoration: none;
+		color: white !important;
+		border: none !important;
+		background: var(--blue);
+		border-radius: 7px;
+	}
+}
+
+.link a:hover {
+	box-shadow: 1px 1px 5px gray;
+}
+
+
 li {
+	list-style: none;
+}
+
+a {
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;;
-	list-style: none;
-	gap: 30px;
+	gap: 25px;
 	margin-top: 5px;
-	padding: 20px 50px;
-	
+	padding: 15px 30px;
+	color: black;
+	text-decoration: none;
+	img {
+		filter: invert(34%) sepia(0%) saturate(0%) 
+			hue-rotate(209deg) brightness(90%) contrast(88%);
+	}
+}
+a:hover {
+	color: var(--blue);
+	border-left: 3px solid var(--blue);
+	img {
+		filter: invert(33%) sepia(19%) saturate(4453%) 
+			hue-rotate(218deg) brightness(92%) contrast(91%);
+
+
+	}
 }
 
 
