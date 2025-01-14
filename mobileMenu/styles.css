@@ -1,5 +1,5 @@
 :root {
-	--blue: #5153c7;
+	--blue: #8283ff;
 }
 
 
@@ -17,42 +17,56 @@ body {
 }	
 
 .container {
+	position: relative;
 	margin: 50px auto;
-	width: 300px;
+	width: 320px;
 	border-radius: 15px;
-	padding: 20px 0px;
+	padding: 60px 0px;
 	box-shadow: -1px 1px 10px lightgray;
 	> *{
 		margin: 20px auto;
 	}
 }
 
+.rotatedImg {
+	position: absolute;
+	top: -20px;
+	border-radius: 5% 5% 80% 20% / 5% 5% 50% 25%;
 
+	z-index: -1;	
+	background: linear-gradient(45deg, var(--blue), #4f50d7); 
+						
+	height: 190px;
+	width: 100%;
+}
 .nameCard {
+	font-size: 18px;
 	display: grid;
-	margin: auto 20px;
+	margin: auto 25px;
 	margin-bottom: 80px;
+	gap: 20px;
 	grid-template-columns: 1fr 2fr;
 	justify-content: space-between;
 	align-items: center;
+	color: white;
 	.left {
-		height: 70px;
-		width: 70px;
+		height: 78px;
+		width: 78px;
 		overflow: hidden;
 		border-radius: 50px;
 	}
 	.left img {
-		transform: translateY(-5px) translateX(-5px);
+		transform: translateX(-5px) translateY(-5px);
 	}
 	p {
-		color: #545454;
+		font-weight: lighter;
 	}
-
+	
 }
 
 
 .link {
-	margin-top: 40px;
+	margin: 40px auto;
 	display: flex;
 	justify-content: center;
 	a {
