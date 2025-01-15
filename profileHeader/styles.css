@@ -9,27 +9,29 @@
 body {
 	height: 100%;
 	font-family: sans-serif;
+	background: #e6e6fe;
 }
 	
 .card {
+	background: white;
 	width: 800px;
 	margin: 100px auto;
 	display: grid;
 	padding: 40px;
-	gap: 100px;
+	gap: 300px;
 	grid-template-columns: 1fr 1fr;
-	border: 1px solid black;
 	border-radius: 30px;
+	box-shadow: 2px 2px 10px lightgray;
 }
 
 .profile {
 	overflow: hidden;
-	width: 100px;
-	height: 100px;
+	width: 80px;
+	height: 80px;
 	border-radius: 30px;
 	box-shadow: 1px 1px 5px lightgray;
 	img {
-		width: 100px;
+		width: 80px;
 		object-fit: cover;
 	}
 }
@@ -44,7 +46,7 @@ body {
 		text-decoration: underline;
 	}
 	> * {
-		margin-bottom: 15px;
+		margin-bottom: 10px;
 	}
 	h2 {
 		margin: 0;
@@ -61,8 +63,8 @@ ul {
 }
 
 li img {
-	width: 30px;
-	height: 30px;
+	width: 25px;
+	height: 25px;
 	filter: brightness(0) saturate(100%);
 }
 
@@ -80,7 +82,7 @@ li img {
 }
 
 .progBar {
-	margin: 60px 0;
+	margin: 20px 0;
 	width: 100%;
 	.top {
 		display: flex;
@@ -91,6 +93,7 @@ li img {
 
 progress {
 	width: 100%;
+	height: 20px;
 }
 
 .bottom {
@@ -101,11 +104,12 @@ progress {
 		margin-top: 10px;
 	}
 	a {
-		padding: 20px 50px;
+		padding: 17px 55px;
 		margin: 50px auto;
-		background: blue;
+		background: #000146;
 		color: white;
 		border-radius: 10px;
+		text-decoration: none;
 	}
 }
 
