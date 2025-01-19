@@ -52,6 +52,7 @@ body {
 		margin: 0;
 	}
 }
+
 ul {
 	margin-top: 30px;
 	width: 100%;
@@ -68,6 +69,10 @@ li img {
 	filter: brightness(0) saturate(100%);
 }
 
+li img:hover {
+	cursor: pointer;
+}
+
 .rightContents {
 	text-align: right;
 	height: 100%;
@@ -79,6 +84,10 @@ li img {
 .infoImg {
 	width: 20px;
 	filter: brightness(0) saturate(100%);
+}
+
+.infoImg:hover {
+	cursor: pointer;
 }
 
 .progBar {
