@@ -9,16 +9,13 @@ let errorGIF =
 
 async function getImage(search) {
 	const img = document.querySelector("img");
-	img.removeAttribute("src");
-	img.classList.toggle("loader");
 	try {
 		let image = await fetch(
 			`https://api.giphy.com/v1/gifs/translate?api_key=${key}&s=${search}`,
 			{ mode: "cors" }
 		);
-		let response = image.json();
+		let response = await image.json();
 		response.then((msg) => {
-			img.classList.toggle("loader");
 			img.setAttribute("src", msg.data.images.original.url);
 		});
 	} catch (e) {
@@ -31,7 +28,7 @@ getImage(s);
 searchBtn.addEventListener("click", () => {
 	s = searchInput.value;
 	searchInput.value = "";
-	getImage(s);
+	getImage(s).then((m) => console.log(m));
 });
 
 newImage.addEventListener("click", () => getImage(s));
