@@ -26,6 +26,9 @@ body {
 }
 
 img {
+	min-height: 200px;
+	min-width: 200px;
+	object-fit: cover;
 	max-height: 500px;
 	border-radius: 10px;
 	border: 1px solid var(--gray);
@@ -48,7 +51,7 @@ button:hover {
 input {
 	padding: 10px 20px;
 	background: var(--gray);
-	border: 2px solid var(--gray);;
+	border: 2px solid var(--gray);
 	color: white;
 	border-radius: 8px;
 	font-size: 1.05em;
@@ -62,4 +65,33 @@ input:focus {
 	background: var(--black);
 	border-color: var(--gray);
 	outline: none;
+}
 
+/* HTML: <div class="loader"></div> */
+.loader {
+	width: 65px;
+	aspect-ratio: 1;
+	position: relative;
+}
+.loader:before,
+.loader:after {
+	content: "";
+	position: absolute;
+	inset: 0 auto auto 0;
+	aspect-ratio: 1;
+	border-radius: 50px;
+	box-shadow: 0 0 0 3px inset #fff;
+	animation: l5 1s infinite linear alternate;
+}
+.loader:after {
+	inset: auto 0 0 auto;
+	animation-delay: -1s;
+}
+@keyframes l5 {
+	0% {
+		width: 20px;
+	}
+	100% {
+		width: 50px;
+	}
+}
