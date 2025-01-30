@@ -16,7 +16,7 @@ async function getImage(search) {
 			{ mode: "cors" }
 		);
 		let response = await image.json();
-		img.src = await msg.data.images.original.url;
+		img.src = await response.data.images.original.url;
 		img.style.opacity = "1";
 	} catch (e) {
 		console.log(e);
