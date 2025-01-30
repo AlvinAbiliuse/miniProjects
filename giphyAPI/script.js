@@ -10,14 +10,14 @@ let errorGIF =
 async function getImage(search) {
 	const img = document.querySelector("img");
 	try {
+		img.style.opacity = "0.5";
 		let image = await fetch(
 			`https://api.giphy.com/v1/gifs/translate?api_key=${key}&s=${search}`,
 			{ mode: "cors" }
 		);
 		let response = await image.json();
-		response.then((msg) => {
-			img.setAttribute("src", msg.data.images.original.url);
-		});
+		img.src = await msg.data.images.original.url;
+		img.style.opacity = "1";
 	} catch (e) {
 		console.log(e);
 		img.src = errorGIF;
