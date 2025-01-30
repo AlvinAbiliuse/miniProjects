@@ -28,7 +28,7 @@ getImage(s);
 searchBtn.addEventListener("click", () => {
 	s = searchInput.value;
 	searchInput.value = "";
-	getImage(s).then((m) => console.log(m));
+	getImage(s);
 });
 
 newImage.addEventListener("click", () => getImage(s));
